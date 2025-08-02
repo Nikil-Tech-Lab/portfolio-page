@@ -424,10 +424,13 @@
     }
 
     let phoneNumber = "919309827909";
-    var url = "https://wa.me/${phoneNumber}?text=Hi, I'm ${encodeURIComponent(name)}.%0A${encodeURIComponent(message)};"
+ var url = "https://wa.me/"+phoneNumber+"?text="
+    +"Hi, I'm"+name+"%0a"
+    +""+message+"%0a%0a";
     window.open(url, '_blank');
   }
 </script>
 
 </body>
+
 </html>
