@@ -133,16 +133,17 @@
     }
 
     .thumbnail-wrapper {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      overflow: hidden;
-      border-radius: 16px;
-    }
-    .poster-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 125%; /* 4:5 ratio */
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.poster-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 16px;
 }
@@ -161,9 +162,6 @@
 .poster-wrapper img:hover {
   transform: scale(1.03);
 }
-    .thumbnail-wrapper::after{
-        padding-top: 45%;
-    }
 
     .thumbnail-wrapper img {
       position: absolute;
