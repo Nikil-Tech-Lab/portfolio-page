@@ -398,10 +398,10 @@
   aspect-ratio: 16 / 9;
   background: url("bg4.jpeg") no-repeat center center/cover;
   margin-left: calc(-50vw + 50%);
-  margin-top: 40px;   /* 👈 THIS adds gap */
+  margin-top: 50px;
+  margin-bottom: 50px; /* 👈 ADD THIS */
   position: relative;
 }
-
 .extra-banner::after {
   content: "";
   position: absolute;
@@ -414,8 +414,8 @@
 /* Mobile fix */
 @media (max-width: 768px) {
   .extra-banner {
-    aspect-ratio: auto;
-    height: 100dvh;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 }
   </style>
