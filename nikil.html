@@ -370,19 +370,15 @@
   height: 100px;
   background: linear-gradient(to bottom, transparent, #0a0a23);
 }
-    .project-banner {
+  .project-banner {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  margin: 0;              /* removes gap */
-  padding: 0;
-  overflow: hidden;
+  height: 100vh;              /* 🔥 full screen height */
+  background: url("bg3.jpeg") no-repeat center center/cover;
+  padding: 0 !important;
+  margin: 0;
+  display: block;
+  position: relative;
 }
-
-.project-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;        /* removes bottom gap */
 }
   </style>
 </head>
@@ -406,9 +402,7 @@
 <section id="projects">
   <h2>Design Which Speaks</h2>
   <!-- New Full Width Project Banner -->
-<div class="project-banner">
-  <img src="bg2.jpeg" alt="Project Banner">
-</div>
+<div class="project-banner"></div>
   <h3 style="text-align:center; margin-top:30px; font-size:24px;">Thumbnails</h3>
   <div class="thumbnail-grid">
     <!-- Replace these image links with your real thumbnails -->
