@@ -418,6 +418,19 @@
     height: auto;
   }
 }
+    .full-image-section {
+  width: 100%;
+  max-width: 1200px;   /* optional: keeps it clean on big screens */
+  margin: 60px auto;   /* spacing top & bottom */
+  padding: 0 20px;     /* small side padding for mobile */
+}
+
+.full-image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
   </style>
 </head>
 <body>
@@ -497,7 +510,9 @@
     </div>
   </div>
 </section>
-
+<div class="full-image-section">
+  <img src="bg7.jpeg" alt="Showcase Image">
+</div>
 <section id="contact">
   <h2>Contact</h2>
  <p class="creator-description">Let’s start working together ! Drop a message to discuss your ideas and turn them into visually stunning designs.</p>
