@@ -443,7 +443,7 @@
     <a href="#contact">Contact</a>
   </nav>
 </header>
-<section class="landing-image"></section>
+<section class="landing-image reveal-bg"></section>
 <section class="hero" id="home">
   <h1><span>Visionary</span> Graphic Designer</h1>
   <p>Hi, I am NSP. A Graphic Designer from India with 3+ years of experience in crafting visual narratives. Skilled in Adobe creative suite. Successfully completed 699+ world wide projects.</p>
@@ -453,7 +453,7 @@
 <section id="projects">
   <h2>Design Which Speaks</h2>
   <!-- New Full Width Project Banner -->
-<div class="project-banner"></div>
+<div class="project-banner reveal-bg"></div>
   <h3 style="text-align:center; margin-top:30px; font-size:24px;">Thumbnails</h3>
   <div class="thumbnail-grid">
     <!-- Replace these image links with your real thumbnails -->
@@ -493,7 +493,7 @@
   <div class="poster-wrapper"><img src="poster6.jpeg" alt="Poster 6"></div>
 </div>
    <!-- NEW FULL WIDTH IMAGE -->
-<div class="extra-banner"></div>
+<div class="extra-banner reveal-bg"></div>
 
 
   
@@ -556,15 +556,29 @@
   });
 
   function revealAll() {
-    sr.reveal('section', { interval: 150 });
-    sr.reveal('.hero h1, .hero p, .hero .btn', { interval: 150 });
-    sr.reveal('.thumbnail-wrapper', { interval: 100 });
-    sr.reveal('.creator-card', { interval: 100 });
-    sr.reveal('.contact-info h4, .social-icons a', { interval: 100 });
-    sr.reveal('input, textarea, .btn', { interval: 100 });
-  }
+  sr.reveal('section', { interval: 150 });
 
+  sr.reveal('.hero h1, .hero p, .hero .btn', { interval: 150 });
+
+  sr.reveal('.thumbnail-wrapper', { interval: 100 });
+  sr.reveal('.poster-wrapper', { interval: 100 });   // ✅ ADD
+  sr.reveal('.reel-wrapper', { interval: 100 });     // ✅ ADD
+
+  sr.reveal('.full-image-section', { interval: 100 }); // ✅ ADD
+  sr.reveal('.landing-image, .project-banner, .extra-banner', { interval: 100 }); // ✅ ADD
+
+  sr.reveal('.creator-card', { interval: 100 });
+  sr.reveal('.contact-info h4, .social-icons a', { interval: 100 });
+  sr.reveal('input, textarea, .btn', { interval: 100 });
+}
+window.addEventListener('load', () => {
   revealAll();
+});
+  sr.reveal('.reveal-bg', {
+  opacity: 0,
+  scale: 0.95,
+  duration: 1200
+});
 
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
